@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Resmi Mu'allimin Angkatan 104</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGASI UTAMA -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo-container" onclick="showPage('welcome-page')">
+                <img src="IMG_20260529_094405.jpg" alt="Logo MMXXIV" class="nav-logo-img">
+                <div class="logo-text">Mu'allimin <span>104</span></div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-link" onclick="showPage('welcome-page')">Beranda</a>
+                <a href="#" class="nav-link" onclick="showPage('info-page')">🌐 Info</a>
+                <a href="#" class="nav-link" onclick="showPage('profil-page')">👥 Profil & Kelas</a>
+                <a href="#" class="nav-link" onclick="showPage('yearbook-page')">📖 Yearbook</a>
+                <a href="#" class="nav-link" onclick="showPage('gallery-page')">📸 Galeri Memori</a>
+                <a href="#" class="nav-link" onclick="showPage('berita-page')">📰 Berita</a>
+                <a href="#" class="nav-link" onclick="showPage('prestasi-page')">🏆 Prestasi</a>
+                <a href="#" class="nav-link" onclick="showPage('dev-page')">🛠️ Dev</a>
+            </nav>
+
+            <div id="auth-status-area">
+                <button class="btn btn-primary" onclick="openAuthModal()">Masuk / Daftar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HALAMAN 1: BERANDA (WELCOME) -->
+    <section id="welcome-page" class="app-page active-page welcome-section">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
+            <img src="IMG_20260529_094405.jpg" alt="Logo Angkatan" class="welcome-logo">
+            <h1>Selamat Datang di Portal Angkatan 104</h1>
+            <p>Ruang digital terpadu integrasi informasi, digital yearbook, pencapaian prestasi, dan memori tak terlupakan.</p>
+            <div style="display: flex; gap: 15px;">
+                <button class="btn btn-scroll" onclick="showPage('info-page')">Mulai Jelajah ✨</button>
+                <button class="btn" style="background: rgba(255,255,255,0.2); color: white;" onclick="showPage('gallery-page')">Lihat Galeri 📸</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- HALAMAN 2: 🌐 INFORMASI ANGKATAN -->
+    <main id="info-page" class="app-page main-content">
+        <div class="section-title">
+            <h2>🌐 Informasi Umum Angkatan 104</h2>
+            <p>Mengenal lebih dekat visi, misi, dan struktur keluarga besar kita.</p>
+        </div>
+        <div class="admin-grid">
+            <div class="admin-card">
+                <h4>📊 Statistik Singkat</h4>
+                <p class="helper-text" style="font-size: 16px; color: var(--text-main);">
+                    • Total Anggota: <strong>290+ Siswa</strong><br>
+                    • Nama Angkatan: <strong>MMXXIV (2024)</strong><br>
+                    • Status: Alumni Madrasah Mu'allimin
+                </p>
+            </div>
+            <div class="admin-card">
+                <h4>🎯 Visi & Misi</h4>
+                <p class="helper-text" style="line-height: 1.6;">"Menjadi generasi pelangsung dan penyempurna amanah yang berintegritas tinggi, kreatif, serta kokoh dalam ukhuwah islamiyah di mana pun berada."</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- HALAMAN 3: 👥 PROFIL SISWA & KELAS -->
+    <main id="profil-page" class="app-page main-content">
+        <div class="section-title">
+            <h2>👥 Profil Siswa & Data Kelas</h2>
+            <p>Pilih kelas untuk melihat daftar nama dan profil lengkap teman-teman.</p>
+        </div>
+        <div style="display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;">
+            <button class="btn btn-primary" onclick="alert('Menampilkan Kelas A')">Kelas A</button>
+            <button class="btn btn-primary" style="background:#475569;" onclick="alert('Menampilkan Kelas B')">Kelas B</button>
+            <button class="btn btn-primary" style="background:#475569;" onclick="alert('Menampilkan Kelas C')">Kelas C</button>
+            <button class="btn btn-primary" style="background:#475569;" onclick="alert('Menampilkan Kelas D')">Kelas D</button>
+        </div>
+        <div class="gallery-grid">
+            <div class="admin-card" style="text-align: center;">
+                <div style="width: 80px; height: 80px; background: #cbd5e1; border-radius: 50%; margin: 0 auto 10px;"></div>
+                <h5>Nama Teman 1</h5>
+                <p class="helper-text" style="margin: 5px 0;">"Tetap semangat, jalani hari dengan senyuman!"</p>
+                <span style="font-size: 12px; color: var(--primary); font-weight: 600;">@instagram_teman</span>
+            </div>
+            <div class="admin-card" style="text-align: center;">
+                <div style="width: 80px; height: 80px; background: #cbd5e1; border-radius: 50%; margin: 0 auto 10px;"></div>
+                <h5>Nama Teman 2</h5>
+                <p class="helper-text" style="margin: 5px 0;">"Man jadda wajada, siapa bersungguh-sungguh pasti berhasil."</p>
+                <span style="font-size: 12px; color: var(--primary); font-weight: 600;">@instagram_teman2</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- HALAMAN 4: 📖 DIGITAL YEARBOOK -->
+    <main id="yearbook-page" class="app-page main-content">
+        <div class="section-title">
+            <h2>📖 Buku Kenangan Digital (Digital Yearbook)</h2>
+            <p>Lembaran memori cetak yang diabadikan ke dalam bentuk digital interaktif.</p>
+        </div>
+        <div class="admin-panel" style="text-align: center; padding: 5px;">
+            <div style="background: #e2e8f0; height: 400px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <p style="color: #64748b; font-weight: 600;">🖼️ [Area Cetak Embed PDF / Flipbook Flash Buku Tahunan Angkatan]</p>
+            </div>
+            <button class="btn btn-success" style="width: auto;">⬇️ Download File PDF Yearbook</button>
+        </div>
+    </main>
+
+    <!-- HALAMAN 5: 📸 GALLERY & MEMORIES -->
+    <main id="gallery-page" class="app-page main-content">
+        <section id="user-upload-panel" class="admin-panel" style="display: none;">
+            <div class="panel-header">
+                <h3>Halo, <span id="logged-user-name">Kreator</span>! 👋</h3>
+                <p>Bagikan foto atau video memorimu ke galeri angkatan di bawah ini.</p>
+            </div>
+            <form id="upload-form" class="admin-card">
+                <div class="form-group">
+                    <label>Keterangan / Judul Kenangan</label>
+                    <input type="text" id="foto-title" required placeholder="Contoh: Keseruan Mukhayam Akhir Tahun">
+                </div>
+                <div class="form-group">
+                    <label for="foto-file" class="custom-file-upload">📁 Pilih Foto / File Media</label>
+                    <input type="file" id="foto-file" accept="image/*,video/*" required>
+                    <span id="file-name-placeholder" class="file-name-text">Belum ada file dipilih</span>
+                </div>
+                <button type="submit" class="btn btn-success">Publish ke Galeri</button>
+            </form>
+        </section>
+
+        <section class="gallery-wrapper">
+            <div class="section-title">
+                <h2>📸 Koleksi Galeri & Memori Bersama</h2>
+                <p>Momen berharga yang diinfokan dan diunggah langsung oleh teman-teman 104.</p>
+            </div>
+            <div class="gallery-grid" id="gallery-grid"></div>
+        </section>
+    </main>
+
+    <!-- HALAMAN 6: 📰 WEBSITE BERITA ANGKATAN -->
+    <main id="berita-page" class="app-page main-content">
+        <div class="section-title">
+            <h2>📰 Berita & Kabar Terkini Angkatan</h2>
+            <p>Ikuti perkembangan info seputar agenda kumpul alumni, info kuliah, dan kabar terkini.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div style="background: #cbd5e1; height: 180px;"></div>
+                <div class="item-content">
+                    <span style="font-size: 12px; color: var(--primary); font-weight: 700;">INFO REUNI</span>
+                    <h4 style="margin: 5px 0 10px;">Agenda Syawalan Besar Angkatan 104 Mu'allimin</h4>
+                    <p class="helper-text">Rencana silaturahmi akbar yang akan diselenggarakan pada bulan depan...</p>
+                    <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none; font-size: 14px;">Baca Selengkapnya →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- HALAMAN 7: 🏆 ACHIEVEMENT ANGKATAN -->
+    <main id="prestasi-page" class="app-page main-content">
+        <div class="section-title">
+            <h2>🏆 Ruang Prestasi & Kebanggaan Angkatan</h2>
+            <p>Daftar pencapaian, piala, dan kontribusi gemilang yang diraih oleh kader 104.</p>
+        </div>
+        <div class="admin-grid">
+            <div class="admin-card" style="border-left: 5px solid #eab308;">
+                <span style="font-size: 24px;">🥇</span>
+                <h4 style="margin: 10px 0 5px;">Juara 1 Lomba Karya Tulis Ilmiah</h4>
+                <p class="helper-text">Diraih oleh Tim Kader Kelas B pada ajang Nasional Tingkat Menengah atas.</p>
+            </div>
+            <div class="admin-card" style="border-left: 5px solid #eab308;">
+                <span style="font-size: 24px;">🏆</span>
+                <h4 style="margin: 10px 0 5px;">Medali Emas Olimpiade Agama</h4>
+                <p class="helper-text">Prestasi membanggakan di bidang kefasihan baca kitab suci dan wawasan syiar.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- HALAMAN 8: DEVELOPMENT DASHBOARD -->
+    <main id="dev-page" class="app-page main-content">
+        <div class="admin-panel">
+            <div class="panel-header">
+                <h3>🛠️ Dashboard Pengembang & Pusat Kendali</h3>
+                <p>Halaman khusus sistem manajemen kuota akun dan konfigurasi core website.</p>
+            </div>
+            <div class="admin-grid">
+                <div class="admin-card">
+                    <h4>Statistik Database</h4>
+                    <p class="helper-text" style="font-size: 16px;">Akun Teman Terdaftar: <strong id="dev-registered-users">0</strong> / 290+ Akun</p>
+                </div>
+                <div class="admin-card">
+                    <h4>Tambah Akun Manual (Oleh Admin)</h4>
+                    <div class="form-group">
+                        <input type="password" id="dev-admin-pass" placeholder="Sandi Master Developer">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="dev-new-username" placeholder="Username Baru Teman">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="dev-new-password" placeholder="Password Akun Baru">
+                    </div>
+                    <button class="btn btn-primary" onclick="addAccountManual()">Tambahkan Akun</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- POPUP MODAL LOGIN / DAFTAR -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button id="tab-login-btn" class="auth-tab-btn active" onclick="switchAuthTab('login')">Masuk Akun</button>
+                <button id="tab-register-btn" class="auth-tab-btn" onclick="switchAuthTab('register')">Daftar Anggota</button>
+            </div>
+            
+            <form id="login-form" class="auth-form-data">
+                <input type="text" id="login-username" required placeholder="Username">
+                <input type="password" id="login-password" required placeholder="Password">
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Masuk</button>
+            </form>
+
+            <form id="register-form" class="auth-form-data" style="display:none;">
+                <input type="text" id="reg-username" required placeholder="Buat Username">
+                <input type="password" id="reg-password" required placeholder="Buat Password">
+                <input type="text" id="reg-token" required placeholder="Masukkan Token Angkatan">
+                <p class="helper-text">*Tanyakan token angkatan pada pengembang web untuk bisa mendaftar.</p>
+                <button type="submit" class="btn btn-success" style="width:100%; margin-top:10px;">Daftar Sekarang</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
